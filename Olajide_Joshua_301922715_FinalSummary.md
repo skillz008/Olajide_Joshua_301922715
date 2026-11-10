@@ -4,15 +4,15 @@
 
 ## Case study
 
-My case study is Real-time Game Leaderboard. I designed the database for players submitting scores and game operators reviewing leaderboards, with separate tables named player, game and score_event. It supports these operations: register players and games; record score updates while retaining history; filter score history and calculate game leaderboards.
+My case study is Real-time Game Leaderboard. I designed the database for players submitting scores and game operators reviewing leaderboards, with separate tables named player, game, and score_event. It supports these operations: register players and games; record score updates while retaining history; filter score history and calculate game leaderboards.
 
 ## Portfolio 1: Database Design and Modelling
 
-I organised the relational design into 3 tables. Primary keys identify records, foreign keys preserve the links, and checks enforce the stated business rules. At most one score event per player and game may be marked current. The normalisation examples show the sample data at 1NF, 2NF and 3NF. All 25 deliberately invalid inserts were rejected without changing the valid sample rows.
+I organised the relational design into 3 tables. Primary keys identify records, foreign keys preserve the links, and checks enforce the stated business rules. At most one score event per player and game may be marked current. The normalisation examples show the sample data at 1NF, 2NF, and 3NF. All 25 deliberately invalid inserts were rejected without changing the valid sample rows.
 
 ![Real-time Game Leaderboard ER diagram](images/Olajide_Joshua_301922715_ERDiagram.png)
 
-Figure 1. Tables, keys and relationships. PK: primary key; FK: foreign key; UK: unique value.
+Figure 1. Tables, keys, and relationships. PK: primary key; FK: foreign key; UK: unique key.
 
 <!-- PAGE BREAK -->
 
@@ -43,11 +43,11 @@ I proposed three MongoDB replica members across separate failure zones. The disc
 
 ## Individual reflection
 
-I kept player, game, score_event in separate tables so their details could be maintained without repeating them in every related record. At most one score event per player and game may be marked current. The constraint tests check this alongside the required values and record links. One issue illustrated by the two-session exercise is that both sessions can read the same value before either update is committed. Locking the row before reading preserves both increments. The index comparison also shows why I need to check the execution plan as well as the final answer: the same result can require different amounts of database work.
+I kept player, game, and score_event in separate tables so their details could be maintained without repeating them in every related record. At most one score event per player and game may be marked current. The constraint tests check this alongside the required values and record links. One issue illustrated by the two-session exercise is that both sessions can read the same value before either update is committed. Locking the row before reading preserves both increments. The index comparison also shows why I need to check the execution plan as well as the final answer: the same result can require different amounts of database work.
 
 ## AI-use declaration
 
-I used GitHub Copilot and the portfolio generator to help prepare the database model, scripts and explanations. The generator ran the PostgreSQL and MongoDB exercises, checked their outputs and captured the result images.  I remain responsible for checking and explaining the submitted work.
+I used GitHub Copilot and the portfolio generator to help prepare the database model, scripts, and explanations. The generator ran the PostgreSQL and MongoDB exercises, checked their outputs, and captured the result images.  I remain responsible for checking and explaining the submitted work.
 
 ## References
 
