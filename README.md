@@ -16,7 +16,7 @@ My case study is Real-time Game Leaderboard. I designed the database for players
 
 I organised the relational design into 3 tables. Primary keys identify records, foreign keys preserve the links, and checks enforce the stated business rules. At most one score event per player and game may be marked current. The normalisation examples show the sample data at 1NF, 2NF, and 3NF. All 25 deliberately invalid inserts were rejected without changing the valid sample rows.
 
-![Real-time Game Leaderboard ER diagram](images/Olajide_Joshua_301922715_ERDiagram.png)
+![Real-time Game Leaderboard ER diagram](images/ERDiagram.png)
 
 Figure 1. Tables, keys, and relationships. PK: primary key; FK: foreign key; UK: unique key.
 
